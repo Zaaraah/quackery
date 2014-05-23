@@ -1,0 +1,6 @@
+<h1>Recently Added Sicknesses</h1>
+<% @latest_sicknesses.each do |sickness| %>
+	<div class="well">
+		<p><%= sickness.name %></p>	
+	</div>
+<% end %>

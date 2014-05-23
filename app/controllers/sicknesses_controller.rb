@@ -1,14 +1,9 @@
 class SicknessesController < ApplicationController
 
-  def index
-	@latest_sicknesses = Sickness.last(5)
-  end
 
-  def all
-	@sicknesses = Sickness.all
-  end
 
   def show
+  	@sickness = Sickness.find(params[:id])
   end
 
   def new
