@@ -1,2 +1,6 @@
-<h1>Sicknesses#index</h1>
-<p>Find me in app/views/sicknesses/index.html.erb</p>
+<h1>Recently Added Sicknesses</h1>
+<% @latest_sicknesses.each do |sickness| %>
+	<div class="well">
+		<p><%= sickness.name %></p>	
+	</div>
+<% end %>

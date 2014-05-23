@@ -1,2 +1,5 @@
-<h1>Sicknesses#new</h1>
-<p>Find me in app/views/sicknesses/new.html.erb</p>
+<h1>New Sickness</h1>
+<%= simple_form_for @tweet do |f| %>
+	<%= f.input :content, as: :text %>
+	<%= f.submit %>
+<% end %>
