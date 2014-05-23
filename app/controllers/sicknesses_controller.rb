@@ -1,9 +1,9 @@
 class SicknessesController < ApplicationController
 
-
-
+	@a_s = Array.new
   def show
   	@sickness = Sickness.find(params[:id])
+  	@a_s
   end
 
   def new
@@ -13,13 +13,12 @@ class SicknessesController < ApplicationController
   def create
 	@sickness = Sickness.new
 	@sickness.name = params[:sickness][:name]
-	@array_s = params[:sickness][:symptoms].split","
-	@sickness.symptoms = @array_s
+	@sickness.symptoms = params[:sickness][:symptoms]
 	@sickness.description = params[:sickness][:description]
 	@sickness.causes = params[:sickness][:causes]
 	@sickness.treatment = params[:sickness][:treatment]
 	@sickness.save!
-	redirect_to :action => :index
+	redirect_to root_path
   end
 
   def edit
@@ -29,8 +28,7 @@ class SicknessesController < ApplicationController
   def update
 	@sickness = Sickness.find(params[:id])
 	@sickness.name = params[:sickness][:name]
-	@array_s = params[:sickness][:symptoms].split","
-	@sickness.symptoms = @array_s
+	@sickness.symptoms = params[:sickness][:symptoms]
 	@sickness.description = params[:sickness][:description]
 	@sickness.save!
 	redirect_to :action => :show
@@ -39,7 +37,7 @@ class SicknessesController < ApplicationController
   def destroy
 	@sickness = Sickness.find(params[:id])
 	@sickness.destroy!
-	redirect_to :action => :show
+	redirect_to root_path
   end
 
 end

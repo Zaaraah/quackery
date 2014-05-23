@@ -3,7 +3,7 @@ class CreateSicknesses < ActiveRecord::Migration
     create_table :sicknesses do |t|
       t.string :name
       t.string :symptoms
-      t.text :descriptions
+      t.text :description
       t.text :causes
       t.text :treatment
 

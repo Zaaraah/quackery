@@ -1,6 +1,12 @@
-<h1>All Sicknesses</h1>
-<% @sicknesses.each do |sickness| %>
-	<div class="well">
-		<p><%= sickness.name %></p>	
-	</div>
-<% end %>
+<h1><%= @sickness.name %></h1>
+<h3>Symptoms</h3>
+	<p><%= @sickness.description %></p>
+<h3>Description</h3>
+	<p><%= @sickness.description %></p>
+<h3>Causes</h3>
+	<p><%= @sickness.causes %></p>
+<h3>Treatment</h3>
+	<p><%= @sickness.treatment %></p>
+
+<p><%= link_to 'Edit', edit_sickness_path %> </p>
+<p><%= link_to 'Delete', sickness_path, method: :delete %> </p>

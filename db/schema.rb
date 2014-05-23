@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140523084222) do
   create_table "sicknesses", force: true do |t|
     t.string   "name"
     t.string   "symptoms"
-    t.text     "descriptions"
+    t.text     "description"
     t.text     "causes"
     t.text     "treatment"
     t.datetime "created_at"
