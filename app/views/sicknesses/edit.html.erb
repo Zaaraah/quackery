@@ -1,2 +1,9 @@
-<h1>Sicknesses#edit</h1>
-<p>Find me in app/views/sicknesses/edit.html.erb</p>
+<h1>Edit <%= @sickness.name %></h1>
+<%= simple_form_for @tweet do |f| %>
+	<%= f.input :name, as: :string %>
+	<%= f.input :symptoms, as: :string %>
+	<%= f.input :description, as: :text %>
+	<%= f.input :causes, as: :text %>
+	<%= f.input :treatment, as: :text %>
+	<%= f.submit %>
+<% end %>

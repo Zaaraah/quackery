@@ -4,8 +4,11 @@ class SicknessesController < ApplicationController
 	@latest_sicknesses = Sickness.last(5)
   end
 
-  def show
+  def all
 	@sicknesses = Sickness.all
+  end
+
+  def show
   end
 
   def new
@@ -15,8 +18,11 @@ class SicknessesController < ApplicationController
   def create
 	@sickness = Sickness.new
 	@sickness.name = params[:sickness][:name]
-	@sickness.symptoms = params[:sickness][:symptoms]
+	@array_s = params[:sickness][:symptoms].split","
+	@sickness.symptoms = @array_s
 	@sickness.description = params[:sickness][:description]
+	@sickness.causes = params[:sickness][:causes]
+	@sickness.treatment = params[:sickness][:treatment]
 	@sickness.save!
 	redirect_to :action => :index
   end
@@ -28,7 +34,8 @@ class SicknessesController < ApplicationController
   def update
 	@sickness = Sickness.find(params[:id])
 	@sickness.name = params[:sickness][:name]
-	@sickness.symptoms = params[:sickness][:symptoms]
+	@array_s = params[:sickness][:symptoms].split","
+	@sickness.symptoms = @array_s
 	@sickness.description = params[:sickness][:description]
 	@sickness.save!
 	redirect_to :action => :show
