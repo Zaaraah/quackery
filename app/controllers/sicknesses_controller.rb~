@@ -1,5 +1,4 @@
 class SicknessesController < ApplicationController
-
   def index
 	@latest_sicknesses = Sickness.last(5)
   end
@@ -39,5 +38,4 @@ class SicknessesController < ApplicationController
 	@sickness.destroy!
 	redirect_to :action => :show
   end
-
 end
