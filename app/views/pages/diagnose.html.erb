@@ -1,0 +1,8 @@
+<h1>Diagnose</h1>
+
+<%= form_for :sickness, :url  => '/diagnoser'  do |f| %>
+<% @a_s.uniq.each do |a| %>
+ <%= f.collection_check_boxes :options, [[a, a]], :first, :last%>
+ <% end %>
+ <%= f.submit %>
+<% end%>

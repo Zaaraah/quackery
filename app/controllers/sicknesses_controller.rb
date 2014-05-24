@@ -1,6 +1,7 @@
 class SicknessesController < ApplicationController
 
 	@a_s = Array.new
+	
   def show
   	@sickness = Sickness.find(params[:id])
   	@a_s
@@ -20,6 +21,8 @@ class SicknessesController < ApplicationController
 	@sickness.save!
 	redirect_to root_path
   end
+  
+  
 
   def edit
 	@sickness = Sickness.find(params[:id])
