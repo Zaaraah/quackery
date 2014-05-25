@@ -1,8 +1,15 @@
-<h1>Diagnose</h1>
+ <%= image_tag 'pinkamoebaleft.png', :id => 'amoeba' %> 
 
-<%= form_for :sickness, :url  => '/diagnoser'  do |f| %>
+
+<div class ="diagnosecontent">
+<h1>Diagnose</h1>
+<h4> Check the symptoms you think you may have. </h4>
+
+
+<%= simple_form_for :sickness, :url  => '/diagnoser'  do |f| %>
 <% @a_s.uniq.each do |a| %>
- <%= f.collection_check_boxes :options, [[a, a]], :first, :last%>
+ <%= f.collection_check_boxes :options, [[a, a]], :first, :last %> 
  <% end %>
  <%= f.submit %>
 <% end%>
+</div>
