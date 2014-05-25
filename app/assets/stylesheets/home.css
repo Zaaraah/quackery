@@ -23,7 +23,7 @@ body{
 	text-decoration: none;
 }
 
-#link a:link{
+#link a:link, #link a:visited{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 20px;
 	color: white;
@@ -41,7 +41,7 @@ a:hover{
 	text-shadow: 0 0 2px;
 }
 
-#diagnoselink a{
+#diagnoselink a:link, #diagnoselink a:visited{
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;
 	color: #39516D;

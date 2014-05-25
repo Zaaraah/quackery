@@ -80,18 +80,22 @@ margin-right: 30%;
 max-height: 100%;
 }
 
+.speech{
+
+}
 
 .diagnosecontent
 {
 margin:auto;
 width: 60%; 
-max-height: 500px;
+height: 700px;
 float: right;
 z-index: 5;
 background: url(speechleft.png) no-repeat;
 padding-left: 100px;
 color: black;
-overflow: scroll;
+overflow: auto;
+
 }
 
 .diagnosecontent h1
