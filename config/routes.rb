@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/diagnose' => 'pages#diagnose'
 	post '/diagnoser' => 'pages#diagnoser'
-get '/error' => 'pages#error'
+  get '/error' => 'pages#error'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
