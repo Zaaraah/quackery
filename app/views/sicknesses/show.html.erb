@@ -1,3 +1,6 @@
+ <%= image_tag 'pinkamoebaleft.png', :id => 'amoeba' %> 
+
+<div class ="diagnosecontent">
 <h1><%= @sickness.name %></h1>
 <h3>Symptoms</h3>
 	<p><%= @sickness.symptoms %></p>
@@ -7,6 +10,4 @@
 	<p><%= @sickness.causes %></p>
 <h3>Treatment</h3>
 	<p><%= @sickness.treatment %></p>
-
-<%= link_to 'All Sicknesses', all_path %>
-<%= link_to 'Contribute', sicknesses_path %>
+</div>

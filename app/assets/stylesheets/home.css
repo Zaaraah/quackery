@@ -4,7 +4,7 @@ body{
 
 #banner{
 	width: 822px;
-	margin-top: 85px;
+	margin-top: 0px;
 	margin-left: auto;
     margin-right: auto;
 }
@@ -42,7 +42,6 @@ a:hover{
 }
 
 #diagnoselink a{
-	
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;
 	color: #39516D;
