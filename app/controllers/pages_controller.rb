@@ -29,13 +29,18 @@ class PagesController < ApplicationController
  	@diagnosis = []
  	@stuff = params[:sickness][:options]
  	@stuff.each do |a|
+ 		if a.empty? == false
  		@symptoms << a
+ 		end
  	end	
 	@sicknesses.each do |s|
 		@symptoms.each do |a|	
-			if a == s.symptoms
+			#if a == s.symptoms 
+			#	@diagnosis << s
+			#end 
+			if s.symptoms.include?a
 				@diagnosis << s
-			end 
+			end
 		end
 	end	
   end

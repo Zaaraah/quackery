@@ -19,10 +19,12 @@ class SicknessesController < ApplicationController
 	@sickness.causes = params[:sickness][:causes]
 	@sickness.treatment = params[:sickness][:treatment]
 	@sickness.save!
-	redirect_to root_path
+	redirect_to sicknesses_path
   end
   
-  
+  def index
+  	@sicknesses = Sickness.all
+  end
 
   def edit
 	@sickness = Sickness.find(params[:id])
@@ -34,13 +36,13 @@ class SicknessesController < ApplicationController
 	@sickness.symptoms = params[:sickness][:symptoms]
 	@sickness.description = params[:sickness][:description]
 	@sickness.save!
-	redirect_to :action => :show
+	redirect_to sicknesses_path
   end
 
   def destroy
 	@sickness = Sickness.find(params[:id])
 	@sickness.destroy!
-	redirect_to root_path
+	redirect_to sicknesses_path
   end
 
 end

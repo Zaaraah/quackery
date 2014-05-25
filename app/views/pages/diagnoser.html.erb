@@ -1,9 +1,8 @@
 <h1>Diagnose</h1>
 
-<% @symptoms.each do |a| %> 
-<%= a %>
-<% end %>
 
-<% @diagnosis.each do |s| %>
-<%= s.name %>
+<% @diagnosis.uniq.each do |s| %>
+ <p> <%= s.name %> </p>
+ <p> <%= s.symptoms %> </p>
+ <p><%= link_to 'More details', sickness_path(s.id) %> </p>
 <%end %>

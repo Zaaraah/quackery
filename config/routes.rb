@@ -1,17 +1,11 @@
 Rails.application.routes.draw do
   resources :sicknesses
-  resources :admins
   root 'pages#index'
   get '/all' => 'pages#all'
   get '/about' => 'pages#about'
   get '/diagnose' => 'pages#diagnose'
 	post '/diagnoser' => 'pages#diagnoser'
-=begin  
-  get '/login' => 'pages#login'
-  #post 'login' => 'pages#error'
-  post '/loginsuccess' => 'pages#loginsuccess'
-  get '/error' => 'pages#error'
-=end  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

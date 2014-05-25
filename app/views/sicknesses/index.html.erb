@@ -1,6 +1,12 @@
-<h1>Recently Added Sicknesses</h1>
-<% @latest_sicknesses.each do |sickness| %>
-	<div class="well">
-		<p><%= sickness.name %></p>	
-	</div>
+<h1>All Sicknesses</h1>
+<table>
+
+<% @sicknesses.each do |sickness| %>
+	<tr>
+		<td> <%= link_to "#{sickness.name}", sickness_path(sickness.id) %> </td>
+		<td><%= link_to 'Edit', edit_sickness_path(sickness.id) %> </td>
+		<td><%= link_to 'Delete', sickness_path(sickness.id), method: :delete %> </td>
+		</tr>
+
 <% end %>
+</table>
