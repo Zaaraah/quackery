@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-	@latest_sicknesses = Sickness.last(5)
+	@latest_sicknesses = Sickness.last(3)
   end
 
   def all
