@@ -1,5 +1,5 @@
  <%= image_tag 'pinkamoebaright.png', :id => 'amoebaright' %> 
-<h1 style="margin-left:300px;">All Sicknesses</h1>
+<h1>All Sicknesses</h1>
 <div class = "allcontent">
 <ul>
 <% @sicknesses.each do |sickness| %>

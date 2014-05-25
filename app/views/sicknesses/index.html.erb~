@@ -1,7 +1,7 @@
 
 
  <%= image_tag 'pinkamoebaright.png', :id => 'amoebaright' %> 
-<h1 style="margin-left:300px;">All Sicknesses</h1>
+<h1 style="margin-left:100px;">All Sicknesses</h1>
 <div class = "allcontent">
 <table >
 <% @sicknesses.each do |sickness| %>
