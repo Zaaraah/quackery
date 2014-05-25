@@ -18,8 +18,12 @@ class SicknessesController < ApplicationController
 	@sickness.description = params[:sickness][:description]
 	@sickness.causes = params[:sickness][:causes]
 	@sickness.treatment = params[:sickness][:treatment]
-	@sickness.save!
-	redirect_to sicknesses_path
+	if @sickness.save
+			flash[:notice] = "New sickness created."
+  			redirect_to sicknesses_path
+		else
+			render :new
+		end	
   end
   
   def index
@@ -35,8 +39,6 @@ class SicknessesController < ApplicationController
 	@sickness.name = params[:sickness][:name]
 	@sickness.symptoms = params[:sickness][:symptoms]
 	@sickness.description = params[:sickness][:description]
-	@sickness.save!
-	redirect_to sicknesses_path
   end
 
   def destroy

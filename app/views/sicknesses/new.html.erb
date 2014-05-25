@@ -1,9 +1,5 @@
 <h1>New Sickness</h1>
-<%= simple_form_for @sickness do |f| %>
-	<%= f.input :name, as: :string %>
-	<%= f.input :symptoms, as: :string %>
-	<%= f.input :description, as: :text %>
-	<%= f.input :causes, as: :text %>
-	<%= f.input :treatment, as: :text %>
-	<%= f.submit %>
+<% if !@message.nil? %>
+	<%= @message %>
 <% end %>
+<%= render partial: "sicknesses/form", locals: { sickness: @sickness } %>
