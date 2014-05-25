@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140523084222) do
 
-  create_table "admins", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "sicknesses", force: true do |t|
     t.string   "name"
     t.string   "symptoms"

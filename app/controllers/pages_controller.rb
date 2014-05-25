@@ -27,6 +27,7 @@ class PagesController < ApplicationController
   	@sicknesses = Sickness.all
  	@symptoms = []
  	@diagnosis = []
+	begin
  	@stuff = params[:sickness][:options]
  	@stuff.each do |a|
  		if a.empty? == false
@@ -43,6 +44,9 @@ class PagesController < ApplicationController
 			end
 		end
 	end	
+	rescue
+		redirect_to error_path
+	end
 end
 
 =begin

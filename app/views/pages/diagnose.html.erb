@@ -11,7 +11,7 @@
 <% @a_s.uniq.each do |a| %>
  <%= f.collection_check_boxes :options, [[a, a]], :first, :last %> 
  <% end %>
- <%= f.submit %>
+ <%= f.submit "Diagnose" %>
 <% end%>
 </div>
 </div>

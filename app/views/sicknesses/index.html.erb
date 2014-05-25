@@ -1,12 +1,20 @@
-<h1>All Sicknesses</h1>
-<table>
 
+
+ <%= image_tag 'pinkamoebaright.png', :id => 'amoebaright' %> 
+<h1>All Sicknesses</h1>
+<div class = "allcontent">
+<table >
 <% @sicknesses.each do |sickness| %>
 	<tr>
-		<td> <%= link_to "#{sickness.name}", sickness_path(sickness.id) %> </td>
-		<td><%= link_to 'Edit', edit_sickness_path(sickness.id) %> </td>
-		<td><%= link_to 'Delete', sickness_path(sickness.id), method: :delete %> </td>
+		<td> <%= link_to "#{sickness.name}", sickness_path(sickness.id) %> | </td>
+		<td><%= link_to 'Edit', edit_sickness_path(sickness.id) %> | </td>
+		<td><%= link_to 'Delete', sickness_path(sickness.id), method: :delete %> | </td>
 		</tr>
 
 <% end %>
 </table>
+</div>
+
+
+
+

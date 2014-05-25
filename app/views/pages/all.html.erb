@@ -1,12 +1,13 @@
  <%= image_tag 'pinkamoebaright.png', :id => 'amoebaright' %> 
 <h1>All Sicknesses</h1>
 <div class = "allcontent">
+<ul>
 <% @sicknesses.each do |sickness| %>
-	<div>
-		<%= link_to "#{sickness.name}", sickness_path(sickness.id) %> 
-	</div>
-</div>
+	<li><h2>	<%= link_to "#{sickness.name}", sickness_path(sickness.id) %></h2> </li>
 <% end %>
+</ul>
+</div>
+
 
 
 
