@@ -1,0 +1,56 @@
+body{
+	background-color: #43BAA4;
+
+}
+
+#banner{
+	width: 822px;
+	margin-top: 85px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#recent{
+	width: 542px;
+	margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#label{
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	color: black;
+	text-decoration: none;
+}
+
+#link a:link{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	color: white;
+}
+
+#labellink a{
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	color: black;
+	text-decoration: underline;
+}
+
+a:hover{
+	text-decoration: none;
+	text-shadow: 0 0 2px;
+}
+
+#diagnoselink a{
+	
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
+	color: #39516D;
+}
+
+#thing
+{
+	width:100%;
+	text-align: center;
+}

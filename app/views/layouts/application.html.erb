@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:700|Amatic+SC:700" rel="stylesheet" type="text/css" />
     <title><%= content_for?(:title) ? yield(:title) : "Quackery" %></title>
     <%= csrf_meta_tags %>
 
@@ -35,10 +36,16 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= javascript_include_tag "application" %>
+
+    <style type="text/css">
+      .navbar, .container-fluid {font-family: 'Amatic SC', cursive; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; background-color: #e2e8e4;}
+      .nav{font-size: 20px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px;}
+      .brand h6{font-size: 35px; padding-top: 8px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left:50px;}
+    </style>
   </head>
   <body>
 
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -46,7 +53,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/"> Quackery </a>
+          <a class="brand" href="/"><h6> -QUACKERY- <h6></a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "About", about_path  %></li>
@@ -85,7 +92,7 @@
  <!--          </div> /.well -->
 <!--        </div> /span-->
 
-        <div class="span9">
+        <div class="span12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
