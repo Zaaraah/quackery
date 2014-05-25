@@ -9,7 +9,7 @@
 
 	
 		<div id="banner">
-			<%= image_tag("banner.png") %>
+			<center><%= image_tag("banner.png") %></center>
 		</div>
 		<div id="recent">
 		<small>
@@ -17,7 +17,7 @@
 			<span id="label">Recently Added:</span>&nbsp;
 			<span id ="link">
 				<% @latest_sicknesses.each do |sickness| %>
-				<%= link_to "#{sickness.name}", sickness_path(sickness.id) %>&nbsp;&nbsp;&nbsp;
+				<%= link_to "#{sickness.name}", sickness_path(sickness.id) %>&nbsp;
 				<% end %>
 			</span>
 			<span id ="labellink"><%= link_to 'All Sicknesses', all_path %></span>

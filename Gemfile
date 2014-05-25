@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'twitter-bootstrap-rails'
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -38,6 +40,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'twitter-bootstrap-rails'
-gem 'simple_form'
-gem 'devise'
+
