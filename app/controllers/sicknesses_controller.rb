@@ -39,6 +39,15 @@ class SicknessesController < ApplicationController
 	@sickness.name = params[:sickness][:name]
 	@sickness.symptoms = params[:sickness][:symptoms]
 	@sickness.description = params[:sickness][:description]
+	@sickness.causes = params[:sickness][:causes]
+	@sickness.treatment = params[:sickness][:treatment]
+	if @sickness.save
+			flash[:notice] = "Sickness edited."
+  			redirect_to sicknesses_path
+		else
+			@message = @admin.errors.messages
+			render :edit
+		end
   end
 
   def destroy
