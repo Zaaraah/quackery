@@ -8,7 +8,7 @@
 
 
 <%= simple_form_for :sickness, :url  => '/diagnoser'  do |f| %>
-<% @a_s.uniq.each do |a| %>
+<% @a_s.uniq.each do |a| %> <!-- [2] BRITT & NEUROGAMI -->
  <%= f.collection_check_boxes :options, [[a, a]], :first, :last %> 
  <% end %>
  <%= f.submit "Diagnose" %>
