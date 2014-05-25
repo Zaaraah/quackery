@@ -50,9 +50,18 @@ z-index: 1;
 max-height: 60%;
 }
 
+#imgerror
+{
+  width: 45%;
+  height: 45%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 #error
 {
-margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .diagnosecontent
@@ -110,3 +119,17 @@ to {margin-bottom: 5%; opacity: 1;}
 from {margin-bottom: 0%; opacity: 0;}
 to {margin-bottom: 5%; opacity: 1;}
 }
+
+#con{
+  margin-top: 85px;
+}
+
+#diagnoselink a:hover{
+  text-decoration: none;
+  text-shadow: 0 0 2px;
+}
+
+#diagnoselink a{
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  color: #39516D;

@@ -1,18 +1,32 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+
+<body>
+<div id="con">
 <h1>Diagnose</h1>
-
 <h4> You might have... </h4>
-<% @diagnosis.uniq.each do |s| %>
 
-<div class = "diagnosercontent">
- <%= image_tag 'sunbac.png', :id => 'sunbac' %> 
-	<div style = "width: 80%; position: relative; float:right; padding: 5%">
- <p> Sickness: <%= s.name %>   <br/> 
-  Symptoms: <%= s.symptoms %>  <br/>
- <%= link_to 'More details', sickness_path(s.id) %> </p>
- </div>
-</div>
-<%end %>
 <% if @diagnosis.empty? == true %>
-<%= image_tag 'error.png', :id => 'error' %> 
-<button> <%= link_to 'Diagnose yourself again', diagnose_path %> </button>
+	<div id="error"><center>
+		<%= image_tag 'error.png', :id => 'imgerror' %>
+	</br></center>
+	<div id="diagnoselink">
+		<center><%= link_to 'Diagnose Yourself Again!', diagnose_path %></center>
+	</div>
 <% end %>
+
+<% @diagnosis.uniq.each do |s| %>
+	<div class = "diagnosercontent">
+	 <%= image_tag 'sunbac.png', :id => 'sunbac' %> 
+		<div style = "width: 80%; position: relative; float:right; padding: 5%">
+		 <p> Sickness: <%= s.name %>   <br/> 
+		  Symptoms: <%= s.symptoms %>  <br/>
+		 <%= link_to 'More details', sickness_path(s.id) %> </p>
+		</div>
+	</div>
+<%end %>
+</div>
+
+</body>
