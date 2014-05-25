@@ -5,3 +5,108 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+  
+  
+  
+  
+  body
+  {
+  background-color: #43BAA4;
+  font-family: 'Josefin Sans';
+  color: white;
+  z-index: 0;
+  }
+  
+  .navbar
+  {
+  z-index: 10;
+  }
+  
+h1
+{
+ font-family: 'Amatic SC';
+ color: white;
+}
+
+h4
+{
+color: #C0EEE5;
+}
+
+#amoeba
+{
+position: absolute;
+margin-left: -30px;
+margin-top: -20px;
+z-index: -1;
+}
+
+#sunbac
+{
+position: relative;
+margin-left: -40px;
+margin-top: 20px;
+z-index: 1;
+max-height: 60%;
+}
+
+#error
+{
+margin: auto;
+}
+
+.diagnosecontent
+{
+margin:auto;
+width: 60%; 
+float: right;
+z-index: 5;
+}
+
+.diagnosercontent
+{
+margin:auto;
+margin-bottom: 5%;
+background-color: #466085;
+width: 60%; 
+float: right;
+z-index: 5;
+max-height: 150px;
+animation:mymove 1s;
+opacity: 0;
+animation: mymove 1s 0s 1; 
+animation-fill-mode: forwards; 
+-webkit-animation:mymove 1s 0s 1; /* Safari and Chrome */
+-webkit-animation-fill-mode: forwards; /* Safari and Chrome */
+
+}
+
+.diagnosercontent p
+{
+font-size: 1.5em;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.diagnosercontent a
+{
+color: #8FDDCE;
+}
+
+a:hover
+{
+color:pink;
+}
+
+@keyframes mymove 
+{
+from {margin-bottom: 0%; opacity: 0;}
+to {margin-bottom: 5%; opacity: 1;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {margin-bottom: 0%; opacity: 0;}
+to {margin-bottom: 5%; opacity: 1;}
+}
